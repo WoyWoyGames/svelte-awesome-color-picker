@@ -97,6 +97,7 @@ _N.A._
 		width: var(--input-size, 25px);
 		height: var(--input-size, 25px);
 		border-radius: var(--input-border-radius, 50%);
+		border: var(--input-border, none);
 		user-select: none;
 	}
 
