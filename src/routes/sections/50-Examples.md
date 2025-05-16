@@ -65,7 +65,7 @@
 
 ### Chrome variant
 
-<ColorPicker bind:rgb bind:hsv bind:hex components={ChromeVariant} sliderDirection="horizontal" />
+<ColorPicker bind:rgb bind:hsv bind:hex components={ChromeVariant} sliderDirection="horizontal" --input-border-radius="2px"/>
 
 **Source code**
 

@@ -59,6 +59,7 @@ See the example [Bind event '`onInput`'](#bind-event-oninput).
 | --picker-indicator-size | `10px`                                   | picker indicator size                  |
 | --picker-z-index        | `2`                                      | popup picker z-index                   |
 | --input-size            | `25px`                                   | color circle size                      |
+| --input-border-radius   | `50%`                                    | color circle border radius             |
 | --focus-color           | `red`                                    | focus color                            |
 | --cp-bg-color           | `white`                                  | background color                       |
 | --cp-border-color       | `black`                                  | border color                           |
