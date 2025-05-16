@@ -87,7 +87,7 @@ _N.A._
 	}
 
 	.alpha {
-		clip-path: circle(50%);
+		clip-path: var(--input-border-radius, circle(50%));
 		background: var(--alpha-grid-bg);
 	}
 
@@ -96,7 +96,7 @@ _N.A._
 		position: absolute;
 		width: var(--input-size, 25px);
 		height: var(--input-size, 25px);
-		border-radius: 50%;
+		border-radius: var(--input-border-radius, 50%);
 		user-select: none;
 	}
 
