@@ -2,6 +2,7 @@ import { type RgbaColor, type HsvaColor, type Colord } from 'colord';
 import type { A11yColor, Components } from '../type/types.js';
 import { type TextsPartial, type A11yTextsPartial } from '../utils/texts.js';
 interface Props {
+    alphaSliderIsBlack?: boolean;
     /** customize the ColorPicker component parts. Can be used to display a Chrome variant or an Accessibility Notice */
     components?: Partial<Components>;
     /** input label, hidden when the ColorPicker is always shown (prop `isDialog={false}`) */

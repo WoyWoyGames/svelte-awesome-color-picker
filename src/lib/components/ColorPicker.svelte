@@ -13,6 +13,7 @@
 	import NullabilityCheckbox from './variant/default/NullabilityCheckbox.svelte';
 
 	interface Props {
+		alphaSliderIsBlack?: boolean;
 		/** customize the ColorPicker component parts. Can be used to display a Chrome variant or an Accessibility Notice */
 		components?: Partial<Components>;
 		/** input label, hidden when the ColorPicker is always shown (prop `isDialog={false}`) */
@@ -64,6 +65,7 @@
 	}
 
 	let {
+		alphaSliderIsBlack = false,
 		components = {},
 		label = 'Choose a color',
 		name = undefined,
@@ -373,7 +375,7 @@
 			/>
 		</div>
 		{#if isAlpha}
-			<div class="a" style:--alphaless-color={(hex ? hex : _hex).substring(0, 7)}>
+			<div class="a {alphaSliderIsBlack? 'a-b':''}" style="--alphaless-color:{(hex ? hex : _hex).substring(0, 7)}">
 				<Slider
 					min={0}
 					max={1}
@@ -515,6 +517,10 @@ import ColorPicker from 'svelte-awesome-color-picker';
 		--track-background:
 			linear-gradient(var(--gradient-direction), rgba(0, 0, 0, 0), var(--alphaless-color)), var(--alpha-grid-bg);
 	}
+  .a-b{
+      --track-background:
+              linear-gradient(var(--gradient-direction), rgba(0, 0, 0, 1), var(--alphaless-color)), var(--alpha-grid-bg) !important;
+  }
 
 	span :global(.sr-only) {
 		position: absolute;
